@@ -1,5 +1,5 @@
 module.exports = {
-    BASE_URL: 'https://t42183.sandbox.mozu.com/api',
+    BASE_URL: 'https://t42183.sandbox.mozu.com/api', // replace with your sandbox URL
     ORDERS_URI: '/commerce/orders',
     SHIPMENTS_URI: '/commerce/shipments',
     ORDER_CANCEL_REASONS_URI: '/commerce/orders/cancel/reasons',
