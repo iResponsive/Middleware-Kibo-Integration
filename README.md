@@ -6,3 +6,5 @@ Steps to access the API's in swagger
 2. Select the server as https://kibo-api-proxy.azurewebsites.net to access the test server environment hosted in Azure
 3. Access the Authentication API and execute it for receiving the access token in the response.
 4. Click on the Authorize button of the swagger and enter the token value and Authorize. Now you are good to access other API's
+
+For Kibo exposed API's, please refer the Kibo documentation : https://api-docs.kibocommerce.com
