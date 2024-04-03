@@ -109,7 +109,7 @@ res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Accept'
  *     tags:
  *      - Orders
  *     summary: Route to get order history by customer email id
- *     description: This API calls the Orders endpoint of Kibo and retrieves the order history using the customer email
+ *     description: This API calls the Orders endpoint of Kibo and retrieves the order history using the customer email. The business logic returns only the top 10 valid orders of the user
  *     parameters:
  *      - in: path
  *        name: email
