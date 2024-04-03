@@ -3,6 +3,50 @@ const axios = require('axios');
 const { BASE_URL, OAUTH_URI, ORDERS_URI,SHIPMENTS_URI,ORDER_CANCEL_REASONS_URI,ORDER_CANCEL_URI,SET_FULFILLMENTINFO_URI,
   KIBO_CLIENT_ID, KIBO_CLIENT_SECRET } = require('./constants');
 
+
+  //temp function for swagger
+  async function getAuthToken(req, res) {
+    try {
+      // Call OAuth URI and get access_token logic here
+      const oAuthURL = `${BASE_URL}${OAUTH_URI}`;
+      const requestBody = {
+        grant_type: 'client_credentials',
+        client_id: KIBO_CLIENT_ID,
+        client_secret: KIBO_CLIENT_SECRET,
+      };
+  
+      const response = await axios.post(oAuthURL, requestBody, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
+      // Extract access token from the response
+    const accessToken = response.data.access_token;
+    const htmlContent = 
+    `<html>
+      <head>
+        <script>
+          // Function to set the access token in Swagger UI
+          function setAccessToken(token) {
+            document.getElementById('accessToken').innerText = token;
+          }
+        </script>
+      </head>
+      <body>
+        <h2>Access Token</h2>
+        <div id="accessToken">${accessToken}</div>
+      </body>
+    </html>`;
+    // Send the HTML content as the response
+    res.send(htmlContent);
+    } catch (error) {
+      console.error('Error fetching access token:', error.message);
+      res.status(500).send('Internal Server Error');
+    }
+  }
+
+  //get token method
 async function getAccessToken(req, res) {
   try {
     // Call OAuth URI and get access_token logic here
