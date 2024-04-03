@@ -1,4 +1,4 @@
-This project serves as a API Proxy applciaiton to access Kibo exposed APIs.<br>
+This project serves as a API Proxy applciaiton to access Kibo exposed APIs.<br> This is coded in NodeJS<br>
 The tenant id, Client Id and Client secret in constants.js file should be replaced with the corresponding values for your application installed at Kibo end.
 
 Steps to access the API's in swagger
