@@ -18,6 +18,10 @@ const options = {
         url: 'https://kibo-api-proxy.azurewebsites.net', // Your API base URL
         description: 'Test server',
       },
+      {
+        url: 'https://iron-lodge-422607-g2.uc.r.appspot.com', // Your API base URL
+        description: 'GCP server',
+      },
     ],
     components: {
       securitySchemes: {
